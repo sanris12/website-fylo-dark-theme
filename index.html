@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      .menu:hover::after {
+        width: 100%;
+      }
+      .menu::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        width: 0;
+        height: 1px;
+        background-color: white;
+        left: 0;
+        transition: 0.3s;
+      }
+
+      header {
+        background-image: url("images/bg-curvy-desktop.svg");
+      }
+
+      @media screen and (min-width: 375px) {
+        header {
+          background-image: url("images/bg-curvy-mobile.svg");
+        }
+      }
+    </style>
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- navbar start -->
+    <nav class="bg-introBg px-5 py-5 md:px-20">
+      <div class="container flex justify-between items-center">
+        <img src="images/logo.svg" alt="logo" class="w-24" class="logo" data-aos="fade-right" data-aos-duration="700" />
+        <ul class="flex gap-3 md:gap-5">
+          <li data-aos="fade-left" data-aos-duration="500" data-aos-delay="500"><a href="#" class="text-white font-relay menu relative">Features</a></li>
+          <li data-aos="fade-left" data-aos-duration="500" data-aos-delay="600"><a href="#" class="text-white font-relay menu relative">Team</a></li>
+          <li data-aos="fade-left" data-aos-duration="500" data-aos-delay="700"><a href="#" class="text-white font-relay menu relative">Sign In</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- header start -->
+    <header class="relative bg-introBg bg-no-repeat bg-bottom bg-contain">
+      <div class="container flex flex-col items-center px-5 py-10 md:px-20 md:py-20">
+        <div class="mb-20 md:w-1/2">
+          <img src="images/illustration-intro.png" alt="illustration-intro" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700" />
+        </div>
+        <div class="flex flex-col items-center text-center gap-5 md:w-8/12">
+          <h1 data-aos="fade-up" data-aos-duration="1000" class="text-white font-relay text-2xl font-[700] md:text-4xl">All your files in one secure location, accessible anywhere.</h1>
+          <p data-aos="fade-up" data-aos-duration="1000" class="text-white font-relay text-base">
+            Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.
+          </p>
+          <button data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" class="py-3 px-16 text-white font-relay font-bold bg-gradient-to-r from-btnBgfrom to-btnBgTo rounded-full hover:opacity-80 transition duration-200">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <!-- main start -->
+    <main class="bg-mainBg px-5 py-10 md:px-20 md:py-20">
+      <div class="container">
+        <div data-aos="fade-up-right" data-aos-duration="1000" class="flex flex-col gap-16 md:flex-row md:flex-wrap md:w-8/12 md:m-auto md:grid md:grid-cols-2 md:grid-rows-2 w-full overflow-hidden md:overflow-visible">
+          <div class="flex flex-col items-center gap-3 text-center">
+            <img src="images/icon-access-anywhere.svg" alt="icon-access-anywhere" class="mb-5" />
+            <h2 class="font-openSans text-white text-2xl font-[700]">Access your files, anywhere</h2>
+            <p class="font-openSans text-white">The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.</p>
+          </div>
+
+          <div data-aos="fade-up-left" data-aos-duration="1000" class="flex flex-col items-center gap-3 text-center">
+            <img src="images/icon-security.svg" alt="icon-security.svg" class="mb-5" />
+            <h2 class="font-openSans text-white text-2xl font-[700]">Security you can trust</h2>
+            <p class="font-openSans text-white">2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.</p>
+          </div>
+
+          <div data-aos="fade-up-right" data-aos-duration="1000" class="flex flex-col items-center gap-3 text-center">
+            <img src="images/icon-collaboration.svg" alt="icon-collaboration.svg" class="mb-5" />
+            <h2 class="font-openSans text-white text-2xl font-[700]">Real-time collaboration</h2>
+            <p class="font-openSans text-white">Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
+          </div>
+
+          <div data-aos="fade-up-left" data-aos-duration="1000" class="flex flex-col items-center gap-3 text-center">
+            <img src="images/icon-any-file.svg" alt="icon-any-file.svg" class="mb-5" />
+            <h2 class="font-openSans text-white text-2xl font-[700]">Store any type of file</h2>
+            <p class="font-openSans text-white">Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-10 md:flex-row md:items-center mt-32 md:mt-20 w-full overflow-hidden">
+          <img data-aos="fade-up" data-aos-duration="1000" src="images/illustration-stay-productive.png" alt="illustration-stay-productive" class="md:w-1/2" />
+          <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300" class="flex flex-col gap-5 md:w-1/2">
+            <h2 class="font-openSans text-white text-2xl font-[700]">Stay productive, wherever you are</h2>
+            <p class="font-openSans text-white">Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
+            <p class="font-openSans text-white">Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
+            <div class="flex items-center gap-3 border-b border-b-btnBgfrom w-max pb-1">
+              <span class="font-openSans text-btnBgfrom">See how Fylo works</span>
+              <img src="images/icon-arrow.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- main end -->
+
+    <!-- section testimonials start-->
+    <section class="bg-mainBg px-5 pt-10 pb-56 md:px-20 md:pt-20">
+      <div class="container flex flex-col gap-5 md:grid md:grid-cols-3 md:gap-10">
+        <div data-aos="fade-up" data-aos-duration="500" class="bg-testimonialsBg p-5 md:py-10 md:px-7 relative">
+          <img src="images/bg-quotes.png" alt="bg-quotes" class="w-8 absolute -top-6 md:-top-4" />
+          <p class="font-openSans text-white text-sm">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+          <div class="flex items-center gap-5 mt-5">
+            <img src="images/profile-1.jpg" alt="profile-1" class="rounded-full h-14" />
+            <div>
+              <p class="font-openSans text-white font-bold">Satish Patel</p>
+              <p class="font-openSans text-white text-xs">Founder & CEO, Huddle</p>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="250" class="bg-testimonialsBg p-5 md:py-10 md:px-7">
+          <p class="font-openSans text-white text-sm">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+          <div class="flex items-center gap-5 mt-5">
+            <img src="images/profile-2.jpg" alt="profile-2" class="rounded-full h-14" />
+            <div>
+              <p class="font-openSans text-white font-bold">Bruce McKenzie</p>
+              <p class="font-openSans text-white text-xs">Founder & CEO, Huddle</p>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" class="bg-testimonialsBg p-5 md:py-10 md:px-7">
+          <p class="font-openSans text-white text-sm">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+          <div class="flex items-center gap-5 mt-5">
+            <img src="images/profile-3.jpg" alt="profile-3" class="rounded-full h-14" />
+            <div>
+              <p class="font-openSans text-white font-bold">Satish Patel</p>
+              <p class="font-openSans text-white text-xs">Founder & CEO, Huddle</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section testimonials end-->
+
+    <!-- footer start-->
+    <footer class="bg-footerBg px-5 py-10 md:px-20 md:py-20">
+      <div class="container">
+        <div class="-mt-48 z-50 bg-introBg px-5 py-7 rounded-md shadow-xl shadow-footerBg flex flex-col gap-5 md:w-8/12 md:mx-auto md:px-16 md:items-center md:text-center">
+          <h2 class="font-openSans text-white text-xl font-[700] md:text-2xl">Get early access today</h2>
+          <p class="font-openSans text-white text-sm md:text-base">It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
+          <div class="flex flex-col gap-5 md:flex-row md:items-center md:gap-2 w-full">
+            <input type="text" role="form" placeholder="example@mail.com" class="w-full py-2 px-5 rounded-full outline-none" />
+            <button class="py-2.5 text-white font-relay font-bold bg-gradient-to-r from-btnBgfrom to-btnBgTo w-full rounded-full md:text-sm md:w-2/3 hover:opacity-80 transition duration-200">Get Started For Free</button>
+          </div>
+        </div>
+
+        <img src="images/logo.svg" alt="logo" class="my-10" />
+
+        <div class="flex flex-col gap-5 md:grid md:grid-cols-6 md:gap-8">
+          <div class="flex items-start gap-5">
+            <img src="images/icon-location.svg" alt="location" />
+            <p class="font-openSans text-white text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+          </div>
+
+          <div class="flex items-start gap-5">
+            <img src="images/icon-phone.svg" alt="icon-phone" />
+            <p class="font-openSans text-white text-sm md:text-base">+1-543-123-4567</p>
+          </div>
+
+          <div class="flex items-start gap-5">
+            <img src="images/icon-email.svg" alt="email" />
+            <p class="font-openSans text-white text-sm md:text-base">example@fylo.com</p>
+          </div>
+
+          <ul>
+            <li><a href="#" class="text-white font-relay">About Us</a></li>
+            <li><a href="#" class="text-white font-relay">Jobs</a></li>
+            <li><a href="#" class="text-white font-relay">Press</a></li>
+            <li><a href="#" class="text-white font-relay">Blog</a></li>
+          </ul>
+
+          <ul>
+            <li><a href="#" class="text-white font-relay">Contact</a></li>
+            <li><a href="#" class="text-white font-relay">Us Terms</a></li>
+            <li><a href="#" class="text-white font-relay">Privacy</a></li>
+          </ul>
+
+          <div class="flex justify-center gap-3">
+            <i class="bx bxl-facebook text-white text-xl border border-white p-1 rounded-full h-max cursor-pointer hover:text-btnBgfrom"></i>
+            <i class="bx bxl-twitter text-white text-xl border border-white p-1 rounded-full h-max cursor-pointer hover:text-btnBgfrom"></i>
+            <i class="bx bxl-instagram text-white text-xl border border-white p-1 rounded-full h-max cursor-pointer hover:text-btnBgfrom"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end-->
+
+    <!-- javascript -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
